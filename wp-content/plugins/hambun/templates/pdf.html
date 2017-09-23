@@ -1,0 +1,73 @@
+{% api %}{% image %}{% video %}
+
+
+
+
+{% if is_single_image %}
+
+<h1>{{ term }}</h1>
+{% for index, item in api %}{% if index > 3 %}{% if index < 5 %}
+<div style="border-color: #F6F4F4; border-style: none solid none none; border-width: 8px; margin-bottom: -10px; padding: 10px 10px 10px 0px; text-align: justify;">
+<a href=""><strong>{{item.title}}</strong></a>{% endif %}{% endif %}{% endfor %} -
+{% for index, item in api %}
+{% if index < 3 %}
+{{item.title | remove '...' |  remove '.' | remove '|' | remove '-' | trim | strtolower | ucfirst | remove_common_words }}, {{item.description | remove '...' | trim | strtolower | ucfirst }}.
+{% endif %}
+{% endfor %}
+</div>
+<input type="hidden" name="IL_IN_TAG" value="1"/>
+<p>
+{% for index, item in images %}{% if index > 0 %}{% if index < 2 %}<a href="http://communions-giftideas.rhcloud.com/{{ item.title | hyphenize }}"><img src="{{ item.mediaurl }}" alt="{{ item.title }}" title="{{ item.title }}" hspace="2" align="left" width=100% height="225" /></a>
+<center><caption><strong>{{ item.title | ucfirst }}</strong></caption> | <a href="#" onclick="window.open('{{ item.link }}')" rel="nofollow"> Read Sources</a>{% endif %}{% endif %}{% endfor %}</center>
+</p>
+</br>
+
+</br>
+
+<div style="border-color: #F6F4F4; border-style: none solid none none; border-width: 8px; margin-bottom: -10px; padding: 10px 10px 10px 0px; text-align: justify;">
+{% for index, item in api %}{% if index > 0 %}{% if index < 5 %}{{item.title | remove '...' | trim | strtolower | ucfirst | remove_common_words }}, {{item.description | remove '...' | trim | strtolower | ucfirst }}.{% endif %}{% endif %}{% endfor %}
+</div>
+</br>
+
+{% for index, item in api %}{% if index < 1 %}
+<center><h2>{{ term }}</h2></center> 
+{% endif %}
+{% endfor %}
+<p>
+{% for index, item in images %}{% if index > 3 %}{% if index < 5 %}<img src="{{ item.mediaurl }}" alt="{{ item.title }}" title="{{ item.title }}" hspace="2" align="left" width=100% height="225" />
+<center><caption><strong>{{ item.title | ucfirst }}</strong></caption> | <a href="#" onclick="window.open('{{ item.link }}')" rel="nofollow"> Read Sources</a>{% endif %}{% endif %}{% endfor %}</center>
+</p>
+</br>
+
+<div style="border-color: #F6F4F4; border-style: none solid none none; border-width: 8px; margin-bottom: -10px; padding: 10px 10px 10px 0px; text-align: justify;">
+{% for index, item in api %}{% if index > 4 %}{% if index < 8 %}{{item.title | remove '...' | trim | strtolower | ucfirst | remove_common_words }}, {{item.description | remove '...' | trim | strtolower | ucfirst }}.{% endif %}{% endif %}{% endfor %}
+</div>
+</br><p>
+{% for index, item in images %}{% if index > 6 %}{% if index < 8 %}<img src="{{ item.mediaurl }}" alt="{{ item.title }}" title="{{ item.title }}" hspace="2" align="left" width=100% height="225" />
+<center><caption><strong>{{ item.title | ucfirst }}</strong></caption> | <a href="#" onclick="window.open('{{ item.link }}')" rel="nofollow"> Read Sources</a>{% endif %}{% endif %}{% endfor %}</center></p>
+</br>
+
+<div style="border-color: #F6F4F4; border-style: none solid none none; border-width: 8px; margin-bottom: -10px; padding: 10px 10px 10px 0px; text-align: justify;"><p>
+{% for index, item in images %}{% if index > 7 %}{{item.title | remove '...' | trim | strtolower | ucfirst | remove_common_words }}, {{item.description | remove '...' | trim | strtolower | ucfirst }}.{% endif %}{% endfor %}
+</p>
+
+</div>
+
+
+{% for index, item in api %}{% if index > 0 %}{% if index < 5 %}
+<span style="-moz-border-radius: 10px; -webkit-border-radius: 10px; background: #F6F4F4; border-radius: 10px; color: #555555; float: left; font-family: Arial; font-size: 14px; line-height: 1.3em; margin: 9px 9px 0 0; padding: 8px 11px;">
+<strong><a href="{{ item.title | build_permalink_for 'read' }}/">{{item.title | remove '...' | trim | strtolower | ucfirst }}</a></strong> - {{item.description | remove '...' | trim | strtolower | ucfirst }}.</span>
+{% endif %}{% endif %}
+{% endfor %}
+
+
+
+
+
+
+
+
+{% else %}
+
+{% endif %}
+

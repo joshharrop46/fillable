@@ -1,0 +1,43 @@
+{% api %}
+{% for index, item in api %}{% if index < 1 %}
+<br />   
+<a target="_blank" rel="nofollow" href="{{ item.link }}">
+<b>Download</b></a><br /> 
+{% endif %}
+{% endfor %}
+</p><br/>
+{% for index, item in api %}{% if index > 0 %}{% if index < 2 %}
+<h2>{{ item.title }}</h2>
+{% endif %}{% endif %}
+{% endfor %}
+<div style="display:block;height:6px;border-bottom:6px solid #1553d9;"></div>
+{% for index, item in api %}{% if index > 0 %}{% if index < 3 %}
+<div align="center">
+<a href="{{ item.title | build_permalink_for "read"  }}/" target="_blank" title="{{ item.title }}"><strong>{{item.title  | remove '...' | trim | strtolower | ucfirst }}</strong></a><br />
+</div>
+<br />
+{{item.description | remove '...' | trim | strtolower | ucfirst }}.<br />
+PDF Name : {{item.title  | remove '...' | trim | strtolower | ucfirst }}<br />
+
+
+<br />
+			
+<div style="display:block;height:2px;border-bottom:1px solid #1553d9;"></div> 
+{% endif %}{% endif %}
+{% endfor %}
+
+{% for index, item in api %}{% if index > 2 %}{% if index < 5 %}
+<div align="center">
+<a href="http://info-onliners.rhcloud.com/{{ item.title | hyphenize }}/" target="_blank" title="{{ item.title }}"><strong>{{item.title  | remove '...' | trim | strtolower | ucfirst }}</strong></a><br />
+</div>
+<br />
+{{item.description | remove '...' | trim | strtolower | ucfirst }}.<br />
+PDF Name : {{item.title  | remove '...' | trim | strtolower | ucfirst }}<br />
+		
+<div style="display:block;height:2px;border-bottom:1px solid #1553d9;"></div> 
+{% endif %}{% endif %}
+{% endfor %}
+
+
+</div>
+
