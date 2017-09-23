@@ -4,8 +4,8 @@ Popular News :<br ?><?php echo do_shortcode('[spp_random_terms count= 5]'); ?>
 </div></div>
 <div style="clear: both"></div>
 </div>
-<div id="haula">
-<a href="http://communions-giftideas.rhcloud.com/dmca-report/" rel="nofollow">DMCA Report</a><br/>
+<div id="nurrochmah">
+<a href="http://fillable-form.b9ad.pro-us-east-1.openshiftapps.com/dmca-report/" rel="nofollow">DMCA Report</a><br/>
 </div>
 <div id="foot">
 <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a><br/>
