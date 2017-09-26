@@ -3,15 +3,13 @@
 
 {% for index, item in api %}
 				{% if index < 1 %}
-<h3>{{item.title  | remove '...' |  remove '.' | remove '|' | remove '-' | trim | strtolower | ucfirst }}</h3>
+<h2>{{item.title  | remove '...' |  remove '.' | remove '|' | remove '-' | trim | strtolower | ucfirst }}</h2>
 {% endif %}
 				{% endfor %}
 <div style="display:block;height:2px;border-bottom:3px solid #1553d9;"></div>
 
 
-{% for index, item in api %}
-			
-			
+
 <p>
 {% for index, item in api %}{% if index < 2 %}
 {{item.description | remove '...' | remove '.' | remove '-' | trim | strtolower | ucfirst | safe}}.

@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
+<meta name="msvalidate.01" content="0A3D342A48A9F088DF54AA94EADAC135" />
 <meta charset="utf-8">
 <meta content='index,follow' name='alexabot'/>
 <meta content='en-us' name='language'/>
@@ -26,9 +27,9 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="Shortcut Icon" href="<?php bloginfo('stylesheet_directory');?>/images/favicon.ico" type="image/x-icon" />
 
-<?php if ( is_search() || is_tag() ) : ?><link rel="canonical" href="<?php bloginfo('url');?>/<?echo spp(get_search_query(), 'canon.html'); ?>/<?php $ab=strtolower($s); echo str_replace(' ', '-',$ab); ?>/" />
+<?php if ( is_search() || is_tag() ) : ?><link rel="canonical" href="<?php bloginfo('url');?>/<?php echo spp(get_search_query(), 'canon.html'); ?>/<?php $ab=strtolower($s); echo str_replace(' ', '-',$ab); ?>/" />
 <meta name="keywords" content="<?php the_search_query(); ?> "/>
-<meta name="description" content="<?echo spp(get_search_query(), 'metadesc.html'); ?>"/>
+<meta name="description" content="<?php echo spp(get_search_query(), 'metadesc.html'); ?>"/>
 
 
 <?php endif ?>
@@ -43,7 +44,7 @@
 </script>
 </head>
 <body <?php body_class(''); ?>> 
-<div id="fillable-form.b9ad.pro-us-east-1.openshiftapps.com/ssi">
+<div id="sekto">
 <div id="header">
 <div id="kiri-rah">
 </div>
